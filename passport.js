@@ -30,7 +30,7 @@ const initialize = (passport) => {
             return done(null, false);
           }
 
-          bcrypt.compare(passport, user.password, (err, res) => {
+          bcrypt.compare(password, user.password, (err, res) => {
             if (err) throw err;
 
             if (res) {
